@@ -72,3 +72,21 @@ div.card {
     color: cornsilk;
     background: #16658a ;
 }
+
+/*Modifico los hipervinculos*/
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: cornsilk;
+}
+
+td{
+    padding-right: 10px;
+}
+
+th{
+    padding-right: 10px;
+}
