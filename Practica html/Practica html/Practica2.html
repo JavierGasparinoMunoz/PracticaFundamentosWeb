@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="v2.3.2/jquery.rateyo.min.css" />
+  <link rel="stylesheet" href="stylesheet/estilos.css" />
+  <script src="//code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+  <script src="javascripts/neon_text.js"></script>
+  <script src="v2.3.2/jquery.rateyo.js"></script>
+  <script src="javascripts/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</head>
+<!--Nombre del restaurante-->
+
+<body background="imagenes/fondo.jpg">
+  <div class=container-fluid-tittle id="nombre">
+    <h1>COMIC PLANET</h1>
+  </div>
+
+  <!-- OFERTAS -->-->
+  <div class="container-fila1">
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+          <img src="imagenes/lokiburguer.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">MENU 2 X 1</h5>
+            <p class="card-text">Llévate al precio de uno, dos de nuestros nuevos menús Asgard, que incluyen la nueva
+              Loki
+              Burguer, patatas y bebida. </p>
+            <p class="card-text" id="precio">Precio del menu original: 14.9€</p>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button superior" id="deplegable" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Reseñas
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body superior">
+                    <strong>Adrip223</strong>
+                    <div id="rateYo1"></div>
+                    <p>Encantado con la oferta, a mi novia y a mi nos sorprendió el sabor de la nueva hamburguesa, muy
+                      satisfechos con todo.</p>
+                    <hr>
+                    <strong>Anónimo</strong>
+                    <div id="rateYo2"></div>
+                    <p>Pedimos esta oferta y nos llenamos, platos muy completos y buena calidad-precio. </p>
+                    <hr>
+                    <strong>Covatastic69</strong>
+                    <div id="rateYo3"></div>
+                    <p>Increible hamburguesa, muy buen servicio y limpieza del local, volveré 100% seguro.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <script>
+              (function () {
+                var offerDate = new Date(2021, 11, 21);
+                var actualDate = new Date();
+                var resta = (offerDate.getDate() - actualDate.getDate());
+                if (resta >= 7) {
+                  document.write("Te quedan solo ", resta, " días para aprovechar esta oferta")
+                } else if (resta <= 0) {
+                  document.write("La oferta ha expirado")
+                } else {
+                  document.write("Acaba pronto");
+                }
+              }())
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <img src="imagenes/costillas.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Ribs Furia</h5>
+            <p class="card-text"> Las mismisimas costillas de Nick Furia y encima a precio de Coulson. Sí, has escuchado
+              bien, nuestras mejores costillas cubiertas de salsa BBQ a poco precio. </p>
+            <p class="card-text" id="precio">Precio del menu original: <s>20€</s> 16.5€ </p>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    Reseñas
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body superior">
+                    <strong>JuliaML8</strong>
+                    <div id="rateYo4"></div>
+                    <p>Muy buena oferta, nunca antes las había probado porque el precio era muy alto pero </p>
+                    <hr>
+                    <strong>SergiPato74</strong>
+                    <div id="rateYo5"></div>
+                    <p>Qué decir, buen ambiente, muy ricas las costillas y sobretodo buen precio para la experiencia que
+                      es.</p>
+                    <hr>
+                    <strong>MrRobot64</strong>
+                    <div id="rateYo6"></div>
+                    <p>Aunque la comida estuviera buenísima, me sigue pareciendo un poco cara para lo que son, pero el
+                      ambiente y la atención al clientes compensaron todo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <script>
+                (function () {
+                  var offerDate = new Date(2021, 11, 25);
+                  var actualDate = new Date();
+                  var resta = (offerDate.getDate() - actualDate.getDate());
+                  if (resta >= 7) {
+                    document.write("Te quedan solo ", resta, " días para aprovechar esta oferta")
+                  } else if (resta == 0) {
+                    document.write("La oferta ha expirado")
+                  } else {
+                    document.write("Acaba pronto");
+                  }
+                }())
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fila2">
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+          <img src="imagenes/Tacos.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">NEW!!
+              Tacos
+              Batman & Robin</h5>
+            <p class="card-text">Entre los edificios de Gotham se encuentra el restaurante que le dio vida a esta
+              delicia
+              y que lleva el nombre de nuestros dos grandes héroes. Nuevo sabor, nuevo precio, solo por tiempo ilimitado
+            </p>
+            <p class="card-text" id="precio">Precio de la oferta: <s>10€</s> 7.75€</p>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    Reseñas
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body superior">
+                    <strong>Pizarritich19</strong>
+                    <div id="rateYo7"></div>
+                    <p>Para no ser un restaurante mexicano, no estaban nada mal la verdad. Aunque lo que le hace
+                      especial
+                      al restaurante es su servicio y ambiente</p>
+                    <hr>
+                    <strong>SaraPeriquito8</strong>
+                    <div id="rateYo8"></div>
+                    <p>Aún con la oferta me parece un poco excesivo el precio, aun así buen servicio y la comida estaba
+                      bastante buena</p>
+                    <hr>
+                    <strong>Anónimo</strong>
+                    <div id="rateYo9"></div>
+                    <p>Para lo que ofrecen me parecen algo caro, pero está muy bueno y la atención al cliente impecable
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <script>
+                (function () {
+                  var offerDate = new Date(2021, 11, 29);
+                  var actualDate = new Date();
+                  var resta = (offerDate.getDate() - actualDate.getDate());
+                  if (resta >= 7) {
+                    document.write("Te quedan solo ", resta, " días para aprovechar esta oferta")
+                  } else if (resta == 0) {
+                    document.write("La oferta ha expirado")
+                  } else {
+                    document.write("Acaba pronto");
+                  }
+                }())
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <img src="imagenes/Postre.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Postres 3
+              X
+              2</h5>
+            <p class="card-text">Siente desde el frio de nuestros helados traídos del mísmisimo Jötunheim hasta el
+              caliente sirope calentado en la cabeza de Ghost Rider. Sólo ahora llévate 3 al precio 2, estamos que lo
+              tiramos.</p>
+            <p class="card-text" id="precio">Precio de los postres en nuestra carta</p>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    Reseñas
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body superior">
+                    <strong>MurvinOzuna</strong>
+                    <div id="rateYo10"></div>
+                    <p>Precio increíble, los postres están buenísimos y aunque de primeras son un poco caros, con el 3 x
+                      2
+                      son lo más rentable del local.</p>
+                    <hr>
+                    <strong>VictorPerez57</strong>
+                    <div id="rateYo11"></div>
+                    <p>Muy buenos postres ambientados cada uno en un superhéroe, muy buena presentación, y de sabor,
+                      riquísimos.</p>
+                    <hr>
+                    <strong>Anónimo</strong>
+                    <div id="rateYo12"></div>
+                    <p>La mejor oferta de todas, ojala estuviera todo el año. Los postres están buenísimos, 10 de 10.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <script>
+                (function () {
+                  var offerDate = new Date(2021, 11, 31);
+                  var actualDate = new Date();
+                  var resta = (offerDate.getDate() - actualDate.getDate());
+                  if (resta >= 7) {
+                    document.write("Te quedan solo ", resta, " días para aprovechar esta oferta")
+                  } else if (resta == 0) {
+                    document.write("La oferta ha expirado")
+                  } else {
+                    document.write("Acaba pronto");
+                  }
+                }())
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inicio del acordeon -->
+  <div class="container-fluid">
+    <div class="row" style="margin-left: 20px; margin-right: 40px; margin-bottom: 20px; margin-top: 20px;">
+      <div class="accordion" id="accordionRestaurante">
+        <!-- Inicio del acordeon correspondiente a la Descripcion-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOneInf">
+            <button class="accordion-button inferior" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOneInf" aria-expanded="true" aria-controls="collapseOneInf">
+              Descripcion
+            </button>
+          </h2>
+          <div id="collapseOneInf" class="accordion-collapse collapse show" aria-labelledby="headingOneInf"
+            data-bs-parent="#accordionRestaurante">
+            <div class="accordion-body inferior">
+              <div class="accordion" id="accordionDescripcion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOneInfCocina">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOneInfCocina" aria-expanded="true" aria-controls="collapseOneInfCocina">
+                      ¿Cual es nuestro estilo de cocina?
+                    </button>
+                  </h2>
+                  <div id="collapseOneInfCocina" class="accordion-collapse collapse show"
+                    aria-labelledby="headingOneInfCocina" data-bs-parent="#accordionDescripcion">
+                    <div class="accordion-body superior">
+                      <p> Comida estilo americano tradicional para los amantes de los comics </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwoInfPrecios">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwoInfPrecios" aria-expanded="false"
+                      aria-controls="collapseTwoInfPrecios">
+                      ¿Cuales son nuestros precios?
+                    </button>
+                  </h2>
+                  <div id="collapseTwoInfPrecios" class="accordion-collapse collapse"
+                    aria-labelledby="headingTwoInfPrecios" data-bs-parent="#accordionDescripcion">
+                    <div class="accordion-body superior">
+                      <p> Precio: $$$ </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThreeInfLocal">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThreeInfLocal" aria-expanded="false"
+                      aria-controls="collapseThreeInfLocal">
+                      ¿Como es nuestro local?
+                    </button>
+                  </h2>
+                  <div id="collapseThreeInfLocal" class="accordion-collapse collapse"
+                    aria-labelledby="headingThreeInfLocal" data-bs-parent="#accordionDescripcion">
+                    <div class="accordion-body superior">
+                      <p><img src="imagenes/dentro.jpg" class="img-fluid"></img></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFourInfTexto">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFourInfTexto" aria-expanded="false" aria-controls="collapseFourInfTexto">
+                      ¿Quieres saber un poco mas del restaurante?
+                    </button>
+                  </h2>
+                  <div id="collapseFourInfTexto" class="accordion-collapse collapse"
+                    aria-labelledby="headingFourInfTexto" data-bs-parent="#accordionDescripcion">
+                    <div class="accordion-body superior">
+                      <p>Restaurante temático de superhéroes con comida americana tradicional, veggie y gluten free.
+                        Este NO es un restaurante de comida rápida. A un superhéroe no lo puedes alimentar con cualquier
+                        cosa. Materia prima de la mejor calidad y si, tardamos un poquito más, pero es porque cocinamos
+                        para ti, al momento. Ubicado en Avda. Alberto Alcocer 5. Madrid.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Inicio del acordeon correspondiente a la Localizacion-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwoInf">
+            <button class="accordion-button inferior" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwoInf" aria-expanded="true" aria-controls="collapseTwoInf">
+              Localizacion
+            </button>
+          </h2>
+          <div id="collapseTwoInf" class="accordion-collapse collapse show" aria-labelledby="headingTwoInf"
+            data-bs-parent="#accordionRestaurante">
+            <div class="accordion-body inferior">
+              <div class="accordion" id="accordionLocalizacion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwoInfDireccion">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwoInfDireccion" aria-expanded="true"
+                      aria-controls="collapseTwoInfDireccion">
+                      Direccion
+                    </button>
+                  </h2>
+                  <div id="collapseTwoInfDireccion" class="accordion-collapse collapse show"
+                    aria-labelledby="headingTwoInfDireccion" data-bs-parent="#accordionLocalizacion">
+                    <div class="accordion-body superior">
+                      <p> Av. de Alberto Alcocer, 5 </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwoInfCodPostal">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwoInfCodPostal" aria-expanded="false"
+                      aria-controls="collapseTwoInfCodPostal">
+                      Codigo Postal
+                    </button>
+                  </h2>
+                  <div id="collapseTwoInfCodPostal" class="accordion-collapse collapse"
+                    aria-labelledby="headingTwoInfCodPostal" data-bs-parent="#accordionLocalizacion">
+                    <div class="accordion-body superior">
+                      <p>28036</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThreeInfProvincia">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThreeInfProvincia" aria-expanded="false"
+                      aria-controls="collapseThreeInfProvincia">
+                      Provincia
+                    </button>
+                  </h2>
+                  <div id="collapseThreeInfProvincia" class="accordion-collapse collapse"
+                    aria-labelledby="headingThreeInfProvincia" data-bs-parent="#accordionLocalizacion">
+                    <div class="accordion-body superior">
+                      <p>Madrid</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFourInfComoLlegar">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFourInfComoLlegar" aria-expanded="false"
+                      aria-controls="collapseFourInfComoLlegar">
+                      Como llegar
+                    </button>
+                  </h2>
+                  <div id="collapseFourInfComoLlegar" class="accordion-collapse collapse"
+                    aria-labelledby="headingFourInfComoLlegar" data-bs-parent="#accordionLocalizacion">
+                    <div class="accordion-body superior">
+                      <p><a
+                          href="https://www.google.com/maps/dir//COMIC+PLANET+%7C+American+Food+%26+Drink+Av.+de+Alberto+Alcocer,+5+28036+Madrid/@40.4595942,-3.6885955,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd42295b86228d53:0xf4c47f92cbacf96c!2m2!1d-3.6885955!2d40.4595942">
+                          Direccion </a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Inicio del acordeon correspondiente al Contacto -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThreeInf">
+            <button class="accordion-button inferior" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThreeInf" aria-expanded="false" aria-controls="collapseThreeInf">
+              Contacto
+            </button>
+          </h2>
+          <div id="collapseThreeInf" class="accordion-collapse collapse" aria-labelledby="headingThreeInf"
+            data-bs-parent="#accordionRestaurante">
+            <div class="accordion-body inferior">
+              <div class="accordion" id="accordionContacto">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThreeInfTelefonos">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThreeInfTelefonos" aria-expanded="true"
+                      aria-controls="collapseThreeInfTelefonos">
+                      Telefonos
+                    </button>
+                  </h2>
+                  <div id="collapseThreeInfTelefonos" class="accordion-collapse collapse show"
+                    aria-labelledby="headingThreeInfTelefonos" data-bs-parent="#accordionContacto">
+                    <div class="accordion-body superior">
+                      <p> Tl: 915999659 </p>
+                      <p> Tl: 687719834 </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThreeInfCorreo">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThreeInfCorreo" aria-expanded="false"
+                      aria-controls="collapseThreeInfCorreo">
+                      Correo Electronico
+                    </button>
+                  </h2>
+                  <div id="collapseThreeInfCorreo" class="accordion-collapse collapse"
+                    aria-labelledby="headingThreeInfCorreo" data-bs-parent="#accordionContacto">
+                    <div class="accordion-body superior">
+                      <a href="mailto:comicplanetes@gmail.com">
+                        <p>comicplanetes@gmail.com</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThreeInfPaginaWeb">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThreeInfPaginaWeb" aria-expanded="false"
+                      aria-controls="collapseThreeInfPaginaWeb">
+                      Pagina web
+                    </button>
+                  </h2>
+                  <div id="collapseThreeInfPaginaWeb" class="accordion-collapse collapse"
+                    aria-labelledby="headingThreeInfPaginaWeb" data-bs-parent="#accordionContacto">
+                    <div class="accordion-body superior">
+                      <p><a href="https://comicplanet.es/">comicplanet.es</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Inicio del acordeon correspondiente al horario-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFourInf">
+            <button class="accordion-button inferior" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFourInf" aria-expanded="false" aria-controls="collapseFourInf">
+              Horario
+            </button>
+          </h2>
+          <div id="collapseFourInf" class="accordion-collapse collapse" aria-labelledby="headingFourInf"
+            data-bs-parent="#accordionRestaurante">
+            <div class="accordion-body inferior">
+              <div class="accordion" id="accordionHorario">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inicio del acordeon correspondiente a las valoraciones -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFiveInf">
+            <button class="accordion-button inferior" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFiveInf" aria-expanded="false" aria-controls="collapseFiveInf">
+              Valoraciones
+            </button>
+          </h2>
+          <div id="collapseFiveInf" class="accordion-collapse collapse" aria-labelledby="headingFiveInf"
+            data-bs-parent="#accordionRestaurante">
+            <div class="accordion-body inferior">
+              <div class="accordion" id="accordionValoraciones">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFiveInfValMedia">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFiveInfValMedia" aria-expanded="true"
+                      aria-controls="collapseFiveInfValMedia">
+                      Valoracion media
+                    </button>
+                  </h2>
+                  <div id="collapseFiveInfValMedia" class="accordion-collapse collapse show"
+                    aria-labelledby="headingFiveInfValMedia" data-bs-parent="#accordionValoraciones">
+                    <div class="accordion-body superior">
+                      <p> Valoracion media de Google: 9/10 (4,5/5)</p>
+                      <p> Valoración media Uber Eats: 9/10 (5,4/6)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFiveInfReseñas">
+                    <button class="accordion-button superior" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFiveInfReseñas" aria-expanded="false"
+                      aria-controls="collapseFiveInfReseñas">
+                      Reseñas
+                    </button>
+                  </h2>
+                  <div id="collapseFiveInfReseñas" class="accordion-collapse collapse show"
+                    aria-labelledby="headingFiveInfReseñas" data-bs-parent="#accordionRestaurante">
+                    <div class="accordion-body superior">
+                      <strong>TitoAndreas</strong>
+                      <div id="rateYo13"></div>
+                      <p>El servicio y la comida dejan mucho que desear.</p>
+                      <hr>
+                      <strong>AbitoTito</strong>
+                      <div id="rateYo14"></div>
+                      <p>Las comidas son un poco caras pero estan muy buenas, completamente recomendado.</p>
+                      <hr>
+                      <strong>Anónimo</strong>
+                      <div id="rateYo15"></div>
+                      <p>La comida esta deliciosa y es un muy buen lugar para comer si eres aficionado a los comics
+                      </p>
+                      <hr>
+                      <strong>AnaMartinez</strong>
+                      <div id="rateYo16"></div>
+                      <p>Aqunque la comida no era para tanto el lugar y el servicio era lo mejor. Lo recomiendo</p>
+                      <hr>
+                      <strong>MariaP64</strong>
+                      <div id="rateYo17"></div>
+                      <p>La comida esta muy buena, el lugar bonito y atienden bien y rapido.</p>
+                      <hr>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>

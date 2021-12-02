@@ -1,0 +1,74 @@
+/* Elimino el borde que trae por defecto el html*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* CSS para el titulo de la oferta */
+h5.card-title {
+    color: black;
+    background-color: blanchedalmond;
+    text-align: center;
+    font-family: 'serif'
+}
+
+
+/* CSS para el titulo de la página */
+div.container-fluid-tittle {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    background-color: black;
+}
+
+
+/* CSS para la primera fila de ofertas */
+div.container-fila1 {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* CSS para la segunda fila de ofertas */
+div.container-fila2 {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* CSS para todos los cards */
+div.card {
+    color: cornsilk;
+    background: #16658a;
+}
+
+/* CSS para el precio de las ofertas */
+#precio {
+    font-size: small;
+}
+
+/* CSS para el desplegable de las ofertas y el contenido de los accordion inferiores*/
+.accordion-button.superior {
+    background: hsl(199, 85%, 21%);
+    color: cornsilk;
+}
+
+/* CSS para el contenido del depsplegable de las ofertas y el contenido de los accordions inferiores*/
+.accordion-body.superior {
+    background: hsl(199, 85%, 21%);
+    color: cornsilk;
+}
+
+/* CSS para el desplegable inferior*/
+.accordion-button.inferior {
+    color: cornsilk; 
+    background: #16658a;
+}
+
+/* CSS para el contenido de los desplegables inferiores */
+.accordion-body.inferior{
+    color: cornsilk;
+    background: #16658a ;
+}
